@@ -25,7 +25,7 @@ def my_seeding(seed):
 
 if __name__ == "__main__":
 
-    dataset_name= 'Glas'
+    dataset_name= 'Kvasir-SEG'
 
     val_name=None
 
@@ -44,9 +44,10 @@ if __name__ == "__main__":
 
 
     current_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    folder_name = f"stage1_{dataset_name}_{val_name}_lr{lr}_{current_time}"
+    # folder_name = f"stage1_{dataset_name}_{val_name}_lr{lr}_{current_time}"
+    folder_name = f"stage1_{dataset_name}_{val_name}_lr{lr}_v1"
 
-    base_dir = "../data"
+    base_dir = "./data"
     data_path = os.path.join(base_dir, dataset_name)
     save_dir = os.path.join("run_files", dataset_name, folder_name)
     if not os.path.exists(save_dir):
